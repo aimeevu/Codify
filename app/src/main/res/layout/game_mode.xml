@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    >
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBrown"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="65dp"
+        android:layout_above="@+id/spinner2"
+        android:layout_centerHorizontal="true">
+
+    </Spinner>
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButton"
+        android:onClick="toGameScreen"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBrown"
+        android:spinnerMode="dropdown"
+        android:layout_above="@+id/imageButton"
+        android:layout_alignLeft="@+id/spinner1"
+        android:layout_alignStart="@+id/spinner1"
+        android:layout_marginBottom="161dp" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBrown"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="35dp"
+        android:layout_above="@+id/imageButton"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

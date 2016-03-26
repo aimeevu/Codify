@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Codify</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">codify</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="signin">Sign In</string>
+    <string name="user">Username</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+</resources>
