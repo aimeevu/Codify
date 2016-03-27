@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBlack"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,18 +13,41 @@
     android:orientation="horizontal"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="codify.aimee.com.codify.MainActivity"
-    tools:showIn="@layout/activity_main"
     >
+
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take in user input to ask for their first name, last name, age, and current time."
+            android:textColor="@color/colorLight"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Code Below"
+        android:layout_above="@+id/frameLayout"
+        android:textColor="@color/colorLight"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/button"
         android:background="@color/colorBrown"
-
         android:id="@+id/frameLayout">
+
 
         <EditText
             android:layout_width="337dp"
@@ -36,10 +60,12 @@
     </FrameLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="49dp"
         android:text="Compile"
+        android:background="@drawable/barbutton"
         android:id="@+id/button"
+        android:layout_marginTop="10dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -55,10 +81,12 @@
         android:id="@+id/users_name_message"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="49dp"
         android:text="End Turn"
+        android:background="@drawable/barbutton"
         android:id="@+id/button3"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/frameLayout"
         android:layout_alignRight="@+id/frameLayout"
         android:layout_alignEnd="@+id/frameLayout" />
