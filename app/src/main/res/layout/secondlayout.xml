@@ -1,53 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="20dp"
-    android:weightSum="1"
-    android:background="@color/colorBlack"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
     >
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Compile Now?"
-        android:textColor="@color/colorLight"
-        android:id="@+id/textView"
-        android:gravity="center"
-         />
+        android:src="@drawable/compilebutton"
+        android:id="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="80dp"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="10dp">
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/question"
+        android:id="@+id/layoutcompile">
 
         <Button
-            android:layout_width="155dp"
-            android:layout_height="wrap_content"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
             android:id="@+id/yesbutton"
-            android:background="@drawable/yesbutton"
-            />
+            android:text="Yes"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/barbutton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:text="Compile?"
+            android:id="@+id/textView" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layoutno"
+        android:layout_below="@+id/layoutcompile">
 
         <Button
-            android:layout_width="155dp"
-            android:layout_height="wrap_content"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
             android:id="@+id/nobutton"
-            android:background="@drawable/yesbutton"
+            android:text="No"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/barbutton"
             android:onClick="noCompile"
+            android:layout_marginTop="25dp"
             />
 
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/characterhead"
+            android:layout_below="@+id/nobutton"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            />
 
-    </LinearLayout>
-
-</LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

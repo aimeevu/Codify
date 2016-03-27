@@ -5,46 +5,58 @@
     android:background="@color/colorBlack"
     >
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/applogo"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="80dp"/>
+
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinnerlevel"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@color/colorBrown"
         android:spinnerMode="dropdown"
-        android:layout_marginBottom="65dp"
-        android:layout_above="@+id/spinner2"
-        android:layout_centerHorizontal="true">
+        android:layout_marginBottom="40dp"
+        android:layout_below="@+id/applogo"
+        android:layout_centerHorizontal="true"
+        >
 
     </Spinner>
 
-    <ImageButton
+    <Spinner
+        android:id="@+id/spinnerlanguage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBrown"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/spinnerlevel"
+        android:layout_marginBottom="40dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/spinnernumberofplayers"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBrown"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="40dp"
+        android:layout_below="@+id/spinnerlanguage"
+        android:layout_centerHorizontal="true" />
+
+    <Button
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:id="@+id/imageButton"
+        android:background="@drawable/barbutton"
+        android:text="Start"
+        android:textColor="@color/darkGreen"
         android:onClick="toGameScreen"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorBrown"
-        android:spinnerMode="dropdown"
-        android:layout_above="@+id/imageButton"
-        android:layout_alignLeft="@+id/spinner1"
-        android:layout_alignStart="@+id/spinner1"
-        android:layout_marginBottom="161dp" />
-
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorBrown"
-        android:spinnerMode="dropdown"
-        android:layout_marginBottom="35dp"
-        android:layout_above="@+id/imageButton"
+        android:layout_below="@+id/spinnernumberofplayers"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
